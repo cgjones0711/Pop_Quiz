@@ -1,26 +1,32 @@
-<!DOCTYPE html>
+<DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Pop_Quiz</title>
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-     <div id="containter">
-         <p id= "highscore"> See High Score</p>
-         <p id = "time"> Timer:</p>
-        
-         <h1>Coding Boot Camp Pop_Quiz</h1>
-         <p> This week we will be taking a Pop Quiz to help see your progress in the class. </p>
-        </div>
-        <a href="Questions.html">
-        <button type="button">Click Me!</button> </a>
-        
-    
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<head>
+     <link rel="stylesheet" href="./styles.css">
+    <title>Pop-Quiz</title>
+</head>
+  <header  
+ class="container" id="container">
+<h1 class= "SMU-fullStack">SMU Full-Stack Quiz</h1>
+    <p>Today you will be taking a quiz over the information which you have learned over the past two weeks. This quiz will be timed and you will only be able to move on to the next question if you answer correctly. The faster you complete; the higher the score!</p>
+</header>
+<section class="container2">
+    <h3>Click the Start Button to Begin</h3>
+       <button id="start">
+        Start!
+        </button>
+        <h3 id= "countDown">
+          Count Down Timer </h3>
+          <div id="main"></div>
           
-    <script src="script.js"></script>
-  </body>
-</html>
+        </section>
 
+        <script src="question.js"> </script>
+      </body>
+
+  </html>
