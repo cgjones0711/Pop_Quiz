@@ -4,6 +4,8 @@ body {
     background-position: center;
     background-color: black;
     
+    
+    
 
 
 }
@@ -12,12 +14,12 @@ body {
     border: 10px;
     border-radius: 20px;
     border-color: teal;
-    margin: auto;
     text-align: center;
     border-style:groove;
-    padding: auto;
-    margin: 20px;
     background-color: aliceblue;
+    margin: auto;
+    
+  
     
 
 }
@@ -26,16 +28,48 @@ body {
     border: 10px;
     border-radius: 20px;
     border-color: teal;
-    margin: auto;
     text-align: center;
     border-style: groove;
     background-color: aliceblue;
-    padding: 20px;
-   height: 35%;
+    height: 35%;
     width: 50%;
+    margin: auto;
 }
 
 #start {
     height: 40px;
-    width: 200;
+    width: 200px;
+    border-style: groove;
+    background-color: teal;
+    border-color: black;
+    border-radius: 20px;
 }
+
+.questions{
+    background-color: aliceblue;
+    height: 60px;
+    text-align: center;
+    border: 10px;
+    border-radius: 20px;
+    border-color: teal;
+   margin: auto;
+    text-align: center;
+    border-style: groove;
+    background-color: aliceblue;
+   
+   height: 35%;
+    width: 50%;
+}
+
+.qbuttons {
+    height: 40px;
+    width: 200px;
+    border: 10px;
+    border-radius: 20px;
+    border-style: groove;
+    border-color: teal;
+    display: flex;
+    margin: auto;
+}
+
+
