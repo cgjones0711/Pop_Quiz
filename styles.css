@@ -2,7 +2,7 @@ body {
     font-family: sans-serif;
     font-weight: bold;
     background-position: center;
-    background-color white-space: ;
+    background-color:black ;
     display: flex;
     justify-content: center;
 }
@@ -14,17 +14,27 @@ body {
     text-align: center;
     border-style:groove;
     background-color: aliceblue;
+    position: relative;
+    top: 200px;
+    left: 250px;
+    width: 75%;
+
   
    
 }
 
 .container2 { 
     border: 10px;
-    border-radius: 20px;
+    border-radius: 30px;
     border-color: teal;
     text-align: center;
     border-style: groove;
     background-color: aliceblue;
+    position: relative;
+    top: 300px;
+    width: 40%;
+    left: 575px;
+    padding-bottom: 20px;
     
     
 }
@@ -37,11 +47,77 @@ body {
     border-color: black;
     border-radius: 20px;
     cursor: pointer;
+    color: black;
 }
-
-.questions{
+button {
+height: 40px;
+    width: 200px;
+    border-style: groove;
+    background-color:black;
+    border-color: black;
+    border-radius: 20px;
+    cursor: pointer;
+    color: teal;
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+#main {
     
 }
 
-.qbuttons {
+.question1 {
+    border-style: groove;
+    background-color: teal;
+    border-color: black;
+    border-radius: 20px;
+    text-align: center;
+    width: 800px;
+    position:relative;
+    top: 200px;
     
+    
+    
+    
+    
+}
+.question2 {
+    border-style: groove;
+    background-color: teal;
+    border-color: black;
+    border-radius: 20px;
+    text-align: center;
+    width: 800px;
+    position:relative;
+    top: 200px;
+    
+   
+    
+}
+.question3 {
+    border-style: groove;
+    background-color: teal;
+    border-color: black;
+    border-radius: 20px;
+    text-align: center;
+    width: 800px;
+    position:relative;
+    top: 200px;
+
+    
+    
+
+
+}
+#timer {
+    border-style: groove;
+    background-color: teal;
+    border-color: black;
+    border-radius: 20px;
+    text-align: center;
+   position: absolute;
+   top: 10px;
+   right: 16px;
+   width: 150px
+    ;
+}
