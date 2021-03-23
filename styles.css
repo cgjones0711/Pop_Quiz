@@ -2,12 +2,9 @@ body {
     font-family: sans-serif;
     font-weight: bold;
     background-position: center;
-    background-color: black;
-    
-    
-    
-
-
+    background-color white-space: ;
+    display: flex;
+    justify-content: center;
 }
 
 .container {
@@ -17,11 +14,8 @@ body {
     text-align: center;
     border-style:groove;
     background-color: aliceblue;
-    margin: auto;
-    
   
-    
-
+   
 }
 
 .container2 { 
@@ -31,10 +25,8 @@ body {
     text-align: center;
     border-style: groove;
     background-color: aliceblue;
-    height: 35%;
-    width: 50%;
-    margin: auto;
-    margin-top: 30px;
+    
+    
 }
 
 #start {
@@ -48,30 +40,8 @@ body {
 }
 
 .questions{
-    background-color: aliceblue;
-    height: 60px;
-text-align: center;
-    border: 10px;
-    border-radius: 20px;
-    border-color: teal;
-   margin: auto;
-    border-style: groove;
-    background-color: aliceblue;
-   height: 35%;
-    width: 75%;
+    
 }
 
 .qbuttons {
-    height: 40px;
-    width: 200px;
-    border: 10px;
-    border-radius: 20px;
-    border-style: groove;
-    border-color: teal;
-    display: flex;
-    margin: auto;
-    font-size: large;
-    font-weight: bold;
-    cursor: pointer;
-}
-
+    
