@@ -1,11 +1,10 @@
 let timeEl = document.querySelector("#countDown");
 let mainEl = document.getElementById("questions");
-let quest1 = document.querySelector("Brady");
-let quest2= document.getElementById("Header");
-let quest3= document.getElementById("URL");
 let currentQuestionIndex= 0
 let answers = ["Brady" , "Header" , "URL" ]
-
+let quest2 = document.querySelector("#question2")
+let quest3 = document.querySelector("question3")
+var carousel = document.querySelector(".carouselbox")
 
 
 
@@ -36,22 +35,29 @@ mainEl.addEventListener('click', function(event) {
   var element = event.target;
   
   if (element.matches("button")) {
-    //if (answers[currentQuestionIndex] === element.innerText ) {
+   //if (answers[currentQuestionIndex] === element.innerText ) {
+     ///display.element
       //increment current question index and hide previous question
     // }
     // else {
-      // if answer is false decrement the timer by 5 seconds 
-
-    
-    //}
+  }
     if  (answers[currentQuestionIndex] !== element.innerText ) {
       secondsLeft = secondsLeft -5
       // secondsLeft -=5
     }
     // after question is answer hide current question and add next question and increment currentQuestionIndex
     let currentQuestionEl=document.getElementById("question" + currentQuestionIndex)
-    let nextQuestionEl=document.getElementById("question"+(currentquestionIndex+1))
+    let nextQuestionEl=document.getElementById("question"+(currentQuestionIndex+1));
     // hide the current question element unhide the next question and incrememnt currentquestionindex
-  }
+    function navigate(direction) {
+      currentQuestionEl = currentQuestionEl + direction;
+      // if (currentQuestionEl < 0) { 
+      //   index = nextQuestionEl - 1; 
+      // } else if (currentQuestionEl> nextQuestionEl - 1) { 
+      //   currentQuestionEl= 0;
+      // }
+     
+    }
+    
+    
 })
-
