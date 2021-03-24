@@ -16,9 +16,7 @@ body {
     border-style:groove;
     background-color: aliceblue;
     position: relative;
-    top: 200px;
-    left: 250px;
-    width: 75%;
+    
     
 
   
@@ -33,10 +31,7 @@ body {
     border-style: groove;
     background-color: aliceblue;
     position: relative;
-    top: 300px;
-    width: 40%;
-    left: 550px;
-    padding-bottom: 20px;
+    
     
     
     
