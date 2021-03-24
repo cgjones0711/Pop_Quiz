@@ -5,10 +5,7 @@ let answers = ["Brady" , "Header" , "URL" ]
 let quest2 = document.querySelector("#question1")
 let quest3 = document.querySelector("question2")
 
-
-
-
-
+//time
 let secondsLeft = 30;
 let gameOver = 0;
 setTime();
@@ -21,6 +18,7 @@ function setTime() {
     if(secondsLeft === 0) {
       // Stops execution of action at set interval
       clearInterval(timerInterval);
+      console.log(timer)
       
       
     }
@@ -47,14 +45,24 @@ mainEl.addEventListener('click', function(event) {
       secondsLeft = secondsLeft -5
 
       // secondsLeft -=5
-    }
+    
     // after question is answer hide current question and add next question and increment currentQuestionIndex
-    let currentQuestionEl=document.getElementById("question" + currentQuestionIndex)
+    let currentQuestionEl=document.getElementById("question" + currentQuestionIndex);
     let nextQuestionEl=document.getElementById("question"+(currentQuestionIndex+1));
-    
-     
-    }
-    
-    
-})
+      if (answers[currentQuestionIndex] == element.innerText) {
+        quest2.style.display="show"
+        console.log(show)
+      }
+        
+          
+        }
 
+        
+      
+        
+      }
+     
+    
+    
+    
+    })
