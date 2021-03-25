@@ -6,9 +6,9 @@ let quest1= document.querySelector("#question0")
 let quest2 = document.querySelector("#question1")
 let quest3 = document.querySelector("question2")
 
-//time
 let secondsLeft = 30;
-let gameOver = 0;
+
+let score = 0;
 setTime();
 function setTime() {
   // Sets interval in variable
@@ -16,11 +16,12 @@ function setTime() {
     secondsLeft--;
     countDown.textContent = secondsLeft + " Time Left!";
 
-    if(secondsLeft === 0) {
+    if(secondsLeft <= 0) {
       // Stops execution of action at set interval
       clearInterval(timerInterval);
       console.log(timer)
-      
+      // Call endgame function XXXXX
+      gameOver();
       
     }
 
@@ -28,116 +29,75 @@ function setTime() {
 
 }
 
-//questions
-
-mainEl.addEventListener("click", function (event) {
-  var element = event.target;
-
-  if (element.matches("button")) {
-    if (answers[currentQuestionIndex] === element.innerText) {
-      console.log
-    }
-    if (answers[currentQuestionIndex] !== element.innerText) {
-      secondsLeft = secondsLeft - 5;
-      // incorrect
-    }
-
-    let currentQuestionEl = document.getElementById(
-      "question" + currentQuestionIndex
-    );
-    let nextQuestionEl = document.getElementById(
-      "question" + (currentQuestionIndex + 1)
-    );
-    function toggleClass(){
-      if(nextQuestionEl.classList=="quest2") {
-      quest1.classList.toggle("quest1")
-      }
-      else{
-        currentQuestionEl.classList.remove("quest2");
-      }
-    }
-      
-
-      
-      
-    }
-      
-    
-
-    
-
-
-
-
-
-
-
-    
-  })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//mainEl.addEventListener('click', function(event) {
-//   var element = event.target;
+function gameOver(){
   
-//   if (element.matches("button")) {
-//    if (answers[currentQuestionIndex] === element.innerText ) {
-     
-    
-//      ///display.element
-//       //increment current question index and hide previous question
-//     // }
-//     // else {
-//   }
-//     if  (answers[currentQuestionIndex] !== element.innerText ) {
-//       secondsLeft = secondsLeft -5
+  // hide all questions
+  for (let i = 0; i < 3; i++) {
+    document.getElementById("question"+i).style.display="none";
+  }
 
-//       // secondsLeft -=5
-    
-//     // after question is answer hide current question and add next question and increment currentQuestionIndex
-//     let currentQuestionEl=document.getElementById("question" + currentQuestionIndex);
-//     let nextQuestionEl=document.getElementById("question"+(currentQuestionIndex+1));
-     
-   
-    
-//     if (answers[currentQuestionIndex] == element.innerText) {
-//         quest2.style.display="show"
-        
-//       }
-        
-          
-//         }
+  // show game over section
+  document.getElementById("game_over").style.display="block";
 
-        
+  // insert score into the game over section
+  document.getElementById("final_score").innerHTML = score;
+
+}
+
+function correct(n) {
+
+  // n is the number for the next question
+  // increase the score ???
+  score +=1;
+  console.log(score)
+
+  // If we just completed the last question, then go to gameOver function -- not the next question
+
+  if (n === "END") {
+
+    gameOver();
+
+  } else {
+
+    // hide all questions (set display to none)
+    for (let i = 0; i < 3; i++) {
+      document.getElementById("question"+i).style.display="none";
+    }
+
+    // Show question n
+    document.getElementById("question"+n).style.display="block";
+  }
+
+}
+
+function incorrect() {
+  secondsLeft = secondsLeft - 5;
+  //secondsLeft -= 5;
+}
+
+
       
-        
-//       }
-     
-    
-    
-    
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
 

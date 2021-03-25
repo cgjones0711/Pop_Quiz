@@ -8,35 +8,43 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <title>Questions</title>
 </head>
-<body>
+<body> 
     
     <main id="questions" >
         <section id="question0" >
             <h1> Who is the best Quarterback of all time? </h1>
             <ul>
-                <button> Brady </button>
-                <button> Favre </button>
-                <button> Aikman </button>
+                <button onclick="correct(1);"> Brady </button>
+                <button onclick="incorrect();"> Favre </button>
+                <button onclick="incorrect();"> Aikman </button>
             </ul>
         
         </section>
         <section id="question1" class="questionHidden">
             <h1> Which of the following tag represents the header of a section in HTML5? </h1>
             <ul>
-                <button> Header </button>
-                <button> Article </button>
-                <button> Aside </button>
+                <button onclick="correct(2);"> Header </button>
+                <button onclick="incorrect();"> Article </button>
+                <button onclick="incorrect();"> Aside </button>
             </ul>
             
         </section>
         <section id="question2" class="questionHidden" >
             <h1> Which of the following input control is used for input fields that should contain an URL address in Web Form 2.0? </h1>
             <ul>
-                <button> URL </button>
-                <button> Number </button>
-                <button> Range </button>
+                <button onclick="incorrect();"> Number </button>
+                <button onclick="correct('END');"> URL </button>
+                <button onclick="incorrect();"> Range </button>
             </ul>
         </section>
+    <section id="game_over" class="questionHidden" >
+    <h1>GAME OVER</h1>
+        <p> Your Final Score IS! <span id="final_score"></span></p>
+    <p>Please enter your initials: <input type="text" id="initials">
+    </p>
+
+    </section>
+
     <section id="timer">
     <h3 id= "countDown">
         Count Down Timer </h3>
