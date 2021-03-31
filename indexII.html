@@ -37,12 +37,24 @@
                 <button onclick="incorrect();"> Range </button>
             </ul>
         </section>
-    <section id="game_over" class="questionHidden" >
-    <h1>GAME OVER</h1>
-        <p> Your Final Score IS! <span id="final_score"></span></p>
-    <p>Please enter your initials: <input type="text" id="initials">
-    </p>
-
+    
+        <section id="game_over" class="questionHidden" >
+            <h1>GAME OVER</h1>
+       <p> YOUR FINAL SCORE! <span id="final_score"></span></p>
+       <form method="Post">
+           <div class= "input-group"></div>
+                <label for="name">Please enter your initials:</label>
+                <input type="text" name="initials" id="initials" placeholder= "XXX"/> 
+            </div>
+            <div id="msg"></div>
+            <button id=enter >ENTER</button>
+        </form>
+            </div>
+    <div class="card">
+        <h2>Last User Played:</h2>
+        <p><strong>Initials:</strong> <span id="userScore"></span></p>
+        </div>
+    </div>
     </section>
 
     <section id="timer">

@@ -2,9 +2,12 @@ let timeEl = document.querySelector("#countDown");
 let mainEl = document.getElementById("questions");
 let currentQuestionIndex= 0
 let answers = ["Brady" , "Header" , "URL" ]
-let quest1= document.querySelector("#question0")
-let quest2 = document.querySelector("#question1")
-let quest3 = document.querySelector("question2")
+let initInput = document.querySelector("#initials")
+let enterBtn = document.querySelector("#enter")
+let msgDiv = document.querySelector("#msg")
+let userSpan = document.querySelector("userScore")
+
+
 
 let secondsLeft = 30;
 
@@ -22,36 +25,33 @@ function setTime() {
       console.log(timer)
       // Call endgame function XXXXX
       gameOver();
-      
-    }
-
-},1000);
-
+      }
+  },1000);
 }
-
 function gameOver(){
   
   // hide all questions
   for (let i = 0; i < 3; i++) {
     document.getElementById("question"+i).style.display="none";
   }
-
   // show game over section
-  document.getElementById("game_over").style.display="block";
+    document.getElementById("game_over").style.display="block";
 
   // insert score into the game over section
-  document.getElementById("final_score").innerHTML = score;
+    document.getElementById("final_score").innerHTML = score;
+   
+   
 
 }
 
 function correct(n) {
 
   // n is the number for the next question
-  // increase the score ???
+  
   score +=1;
   console.log(score)
 
-  // If we just completed the last question, then go to gameOver function -- not the next question
+  // complete the last question, then go to gameOver function -- not the next question
 
   if (n === "END") {
 
@@ -74,6 +74,45 @@ function incorrect() {
   secondsLeft = secondsLeft - 5;
   //secondsLeft -= 5;
 }
+
+renderLastRegistered();
+
+function displayMessage(type, message) {
+  msgDiv.textContent = message;
+  msgDiv.setAttribute("class", type);
+}
+
+function renderLastRegistered() {
+  var initials = localStorage.getItem("initials");
+ 
+
+  if (!initials ){
+    return;
+  }
+
+  userSpan.textContent = initials;
+  
+}
+
+
+  enterBtn.addEventListener("click", function(event) {
+  event.preventDefault();
+
+  var initials = document.querySelector("#initials").value;
+ 
+
+  if (initials === "") {
+    displayMessage("error", "Come on Bro");
+  
+  } else {
+    displayMessage("success", "I Got You");
+
+    localStorage.setItem("initals", initials);
+    ;
+    renderLastRegistered();
+  }
+});
+
 
 
       
