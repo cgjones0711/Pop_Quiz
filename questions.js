@@ -5,7 +5,7 @@ let answers = ["Brady" , "Header" , "URL" ]
 let initInput = document.querySelector("#initials")
 let enterBtn = document.querySelector("#enter")
 let msgDiv = document.querySelector("#msg")
-let userSpan = document.querySelector("userScore")
+let userSpan = document.querySelector("#userScore")
 
 
 
