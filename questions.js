@@ -107,9 +107,10 @@ function renderLastRegistered() {
   } else {
     displayMessage("success", "I Got You");
 
-    localStorage.setItem("initals", initials);
+    localStorage.setItem("initials", initials);
     ;
-    renderLastRegistered();
+    renderLastRegistered(localStorage.getItem"initials");
+    
   }
 });
 
