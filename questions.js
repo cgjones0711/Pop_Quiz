@@ -1,5 +1,5 @@
 let timeEl = document.querySelector("#countDown");
-let mainEl = document.getElementById("questions");
+// let mainEl = document.getElementById("questions");
 let currentQuestionIndex= 0
 let answers = ["Brady" , "Header" , "URL" ]
 let initInput = document.querySelector("#initials")
@@ -46,7 +46,7 @@ function gameOver(){
 
 function correct(n) {
 
-  // n is the number for the next question
+ 
   
   score +=1;
   console.log(score)
@@ -83,10 +83,9 @@ function displayMessage(type, message) {
 }
 
 function renderLastRegistered() {
-  var initials = localStorage.getItem("initials");
+  let initials = localStorage.getItem("initials");
  
-
-  if (!initials ){
+   if (!initials ){
     return;
   }
 
@@ -94,50 +93,21 @@ function renderLastRegistered() {
   
 }
 
-
   enterBtn.addEventListener("click", function(event) {
   event.preventDefault();
 
-  var initials = document.querySelector("#initials").value;
+  let initials = document.querySelector("#initials").value;
  
 
   if (initials === "") {
     displayMessage("error", "Come on Bro");
-  
-  } else {
+  } 
+  else {
     displayMessage("success", "I Got You");
 
     localStorage.setItem("initials", initials);
-    ;
-    renderLastRegistered(localStorage.getItem"initials");
-    
+    renderLastRegistered();
   }
 });
 
-
-
-      
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
 
