@@ -2,20 +2,15 @@ let timeEl = document.querySelector("#countDown");
 // let mainEl = document.getElementById("questions");
 let currentQuestionIndex= 0
 let answers = ["Brady" , "Header" , "URL" ]
-let initInput = document.querySelector("#initials")
-let enterBtn = document.querySelector("#enter")
-let msgDiv = document.querySelector("#msg")
-let userSpan = document.querySelector("#userScore")
-
 
 
 let secondsLeft = 30;
 
 let score = 0;
-setTime();
-function setTime() {
+      setTime();
+      function setTime() {
   // Sets interval in variable
-  let timerInterval = setInterval(function() {
+let timerInterval = setInterval(function() {
     secondsLeft--;
     countDown.textContent = secondsLeft + " Time Left!";
 
@@ -74,6 +69,11 @@ function incorrect() {
   secondsLeft = secondsLeft - 5;
   //secondsLeft -= 5;
 }
+//save function
+let initInput = document.querySelector("#initials")
+let enterBtn = document.querySelector("#enter")
+let msgDiv = document.querySelector("#msg")
+let userSpan = document.querySelector("#userScore")
 
 renderLastRegistered();
 
@@ -106,6 +106,14 @@ function renderLastRegistered() {
     displayMessage("success", "I Got You");
 
     localStorage.setItem("initials", initials);
+
+    // save appears after reload
+for (let i = 0; i < localStorage.length; i++) {
+  const key = localStorage.key[i];
+  const value = localStorage.getItem(key);
+  
+  userSpan.innerHTML += `${key}: ${value};</br>`
+}
     renderLastRegistered();
   }
 });
